@@ -12,28 +12,69 @@
             margin: 0;
             padding: 0;
         }
+        .nav-list {
+            display: flex;
+            column-gap: 46px;
+            font-weight: 400;
+            font-size: 18px;
+            letter-spacing: -0.15px;
+            list-style-type: none;
+        }
+        .navbar{
+            color: white;
+            background-color: #1e1e1e;
+            text-decoration: none;
+            padding: 10px 10px 10px;
+            font-size: 20px;
+            transition: background 0.3s;
+            
+        }
+        .navbar a:hover {
+            background: #333;
+            border-radius: 5px;
+        }
+        .nav-item a{
+            color: #FFFFFF;
+            text-decoration: none;
+        }
         .container {
             width: 80%;
             margin: auto;
             padding: 20px;
         }
         .header {
+            display: flex;
             text-align: center;
-            padding: 20px;
+            justify-content: space-between;
+            
         }
+        .header .info {
+            text-align: left; 
+        }
+        
         .profile img {
-            width: 150px;
-            border-radius: 50%;
-            display: block;
-            margin: 30px auto;
+            width: 300px;
+            border-radius: 20%;
+            
         }
-        .projects, .experience {
-            margin-top: 40px;
+        .contact-info img{
+            max-height: 30px;
+            width:auto;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 2%;
+
+        }
+        .projects, .experience .skills {
+            margin-top: 5%;
         }
         .projects-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px; 
             justify-content: center;
         }
         .project {
@@ -41,43 +82,125 @@
             padding: 10px;
             border-radius: 10px;
             text-align: center;
-            width: 200px;
+            width: 300px;
         }
         .project img {
             width: 100%;
             border-radius: 5px;
         }
+        .project-details{
+            display: none;
+            margin-top: 10px;
+        }
+        .project-details a img{
+            max-height: 30px; 
+            width:auto;
+            
+        }
+        .project-footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .project-skills img{
+            max-height: 30px; 
+            width:auto;
+        }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#about">William Doyle</a>
+            </li>
+            <li class="nav-item">
+                <a href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+                <a href="#projects">Projects</a>
+            </li>
+        </ul>
+    </div>
+
     <div class="container">
         <div class="header">
-            <h1>William Doyle</h1>
-            <p>Software Engineer</p>
+            <div class="info">
+                <h1 class="info-name">William Doyle</h1>
+                <p class="info-title">Software Engineer</p>
+                <div class="contact-info">
+                    <a>
+                        <img src="src/Assets/github-icon.png" alt="github">
+                    </a>
+                    <a>
+                        <img src="src/Assets/linkedin-icon.png" alt="Linkedin">
+                    </a>
+                    <a>
+                        <img src="src/Assets/gmail-icon.png" alt="Gmail">
+                    </a>
+                </div>
+                <p style="font-size:20px;"> Hello! my name is William Doyle, I graduated from Worcester Polytechnic Insititute 
+                    with a bachelor's in computer science. I have strong interest in machine learning, systems level programming, 
+                    and backend software development.</p>
+            </div>
+            <div>
+                <div class="profile">
+                    <img src="src/Assets/Graduation_Picture.jpg" alt="William Doyle">
+                </div>
+            </div>
         </div>
-        
-        <div class="profile">
-            <img src="src/Assets/Graduation_Picture.jpg" alt="William Doyle">
-            <p> Hello! my name is William Doyle, I graduated from Worcester Polytechnic Insititute 
-                with a bachelor's in computer science. I have strong interest in machine learning, systems level programming, 
-                and backend software development.</p>
+            
+        <div id="skills" class="skills">
+
         </div>
-        <div class="experience">
+        <div id="experience" class="experience">
             <h2>Experience</h2>
+            <p>Software Enigneer Intern</p>
+            <p>Shoptaki</p>
             <ul>
-                <li>Developed web applications using C# and .NET</li>
-                <li>Worked on AI-powered solutions and cloud computing</li>
-                <li>Experience with distributed systems and backend development</li>
+                <li>Responsible for implementing Shoptaki's natural language solution for querying internal relational databases backend for website.</li>
+                <li>Researched natural language models (commercial and open source) and selected models for deployment.</li>
+                <li>Cleaned and Preprocessed WikiSQL training dataset in Python and Pandas for model training, ensuring high-quality and accurate datasets for analysis.</li>
+                <li>Ran encoder-decoder models and compared overall performance/accuracy using TensorFlow on Google Collab.</li>
+                <li>Led team organization and project structuring using Agile methodologies, coordinating tasks and ensuring timely delivery of project objectives.</li>
             </ul>
         </div>
-
-        <div class="projects">
+        <div id="projects" class="projects">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <div class="project">
+                <div class="project" onclick="toggleDetails(1)">
+                    
+                    <img src="src/Assets/custom-malloc-thumbnail.png" alt="Memory Allocator">
+                    <h2>Custom Memory Allocator in C++</h2>
+
+                    <div class="project-details" id="details-1" >
+                        <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                        <div class="project-footer">
+                            <div class="project-skills">
+                                <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
+                            </div>
+                            <a href="">
+                                <img src="src/Assets/github-icon.png" alt="github">
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="project" onclick="toggleDetails(2)">
                     <a href="">
-                        <img src="src/Assets/Bar_Harbor_Picture.jpg" alt="Project 1">
-                        <p>Finacial Literacy and Budgeting App</p>
+                        <img src="" alt="Mositure Sensor">
+                        <p>ESP32 Wireless Moisture Sensor</p>
+                    </a>
+                </div>
+                <div class="project" onclick="toggleDetails(3)">
+                    <a href="">
+                        <img src="" alt="Project 1">
+                        <p>Financial Literacy and Budgeting App</p>
                     </a>
                 </div>
                 <div class="project">
@@ -87,8 +210,8 @@
                     </a>
                 </div>
                 <div class="project">
-                    <a href="">
-                        <img src="project3.jpg" alt="Project 3">
+                    <a href="/src/Pages/AcadiaPage.html">
+                        <img src="src/Assets/Bar_Harbor_Picture.jpg" alt="Project 3">
                         <p>Acadia Sound Analysis Project</p>
                     </a>
                 </div>
@@ -103,10 +226,16 @@
         <div class="education">
 
         </div>
-        <div class="contactInfo">
-
-        </div>
-        
     </div>
+    <script>
+        function toggleDetails(index) {
+            const details = document.getElementById(`details-${index}`);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
