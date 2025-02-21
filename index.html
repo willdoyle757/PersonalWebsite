@@ -72,28 +72,33 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px; 
+            
             justify-content: center;
+            align-items: center;
         }
         .project {
             background-color: #1e1e1e;
-            padding: 10px;
+            padding: 30px;
             border-radius: 10px;
+            border: 3px solid #FFFFFF;
             text-align: center;
-            width: 300px;
+            width: 1000px;
+        }
+        .project-header{
+            display: flex;         
+            justify-content: space-between; 
+            align-items: center;
         }
         .project img {
-            width: 100%;
+            width: 300px;
             border-radius: 5px;
         }
         .project-details{
-            display: none;
+            padding: 10px;
             margin-top: 10px;
         }
         .project-details a img{
-            max-height: 30px; 
+            max-height: 40px; 
             width:auto;
             
         }
@@ -101,17 +106,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-left: 30px;
             margin-top: 10px;
         }
         .project-skills img{
-            max-height: 30px; 
+            max-height: 40px; 
             width:auto;
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        
         <ul class="nav-list">
             <li class="nav-item">
                 <a href="#about">William Doyle</a>
@@ -159,7 +164,7 @@
 
         </div>
         <div id="experience" class="experience">
-            <h2>Experience</h2>
+            <h1>Experience</h2>
             <p>Software Enigneer Intern</p>
             <p>Shoptaki</p>
             <ul>
@@ -171,60 +176,98 @@
             </ul>
         </div>
         <div id="projects" class="projects">
-            <h2>Projects</h2>
+            <h1>Projects</h2>
             <div class="projects-grid">
-                <div class="project" onclick="toggleDetails(1)">
-                    
-                    <img src="src/Assets/custom-malloc-thumbnail.png" alt="Memory Allocator">
-                    <h2>Custom Memory Allocator in C++</h2>
-
-                    <div class="project-details" id="details-1" >
-                        <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
-                        <div class="project-footer">
-                            <div class="project-skills">
-                                <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
+                <div class="project">
+                    <div class="project-header">
+                        <img src="src/Assets/custom-malloc-thumbnail.png" alt="Memory Allocator">
+                        <div class="project-details" id="details-1" >
+                            <h2>Custom Memory Allocator in C++</h2>
+                            <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                            <div class="project-footer">
+                                <div class="project-skills">
+                                    <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
+                                </div>
+                                <a href="">
+                                    <img src="src/Assets/github-icon.png" alt="github">
+                                </a>
                             </div>
-                            <a href="">
-                                <img src="src/Assets/github-icon.png" alt="github">
-                            </a>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <div class="project">
+                    <div class="project-header">
+                        <img src="" alt="Mositure Sensor">
+                        <div class="project-details" id="details-2" >
+                            <h2>ESP32 Wireless Moisture Sensor</h2>
+                            <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                            <div class="project-footer">
+                                <div class="project-skills">
+                                    <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
+                                </div>
+                                <a href="">
+                                    <img src="src/Assets/github-icon.png" alt="github">
+                                </a>
+                            </div>
                         </div>
                     </div>
                     
                 </div>
-                <div class="project" onclick="toggleDetails(2)">
-                    <a href="">
-                        <img src="" alt="Mositure Sensor">
-                        <p>ESP32 Wireless Moisture Sensor</p>
-                    </a>
-                </div>
                 <div class="project" onclick="toggleDetails(3)">
-                    <a href="">
-                        <img src="" alt="Project 1">
-                        <p>Financial Literacy and Budgeting App</p>
-                    </a>
+                    <div class="project-header">
+                        <img src="src/Assets/Financial-Thumbnail.png" alt="Project 1">
+                        <div class="project-details" id="details-3" >
+                            <h2>Financial Literacy and Budgeting App</h2>
+                            <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                            <div class="project-footer">
+                                <div class="project-skills">
+                                    <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
+                                </div>
+                                <a href="">
+                                    <img src="src/Assets/github-icon.png" alt="github">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="project">
-                    <a href="">
+                    <div class="project-header">
                         <img src="project2.jpg" alt="Project 2">
-                        <p>Blood MNIST CNN Classifier Transfer Learning Model</p>
-                    </a>
+                        <div class="project-details" id="details-4" >
+                            <h2>Blood MNIST CNN Classifier Transfer Learning Model</h2>
+                            <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                            <div class="project-footer">
+                                <div class="project-skills">
+                                    <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
+                                </div>
+                                <a href="">
+                                    <img src="src/Assets/github-icon.png" alt="github">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="project">
-                    <a href="/src/Pages/AcadiaPage.html">
+                <div class="project" >
+                    <div class="project-header">
                         <img src="src/Assets/Bar_Harbor_Picture.jpg" alt="Project 3">
-                        <p>Acadia Sound Analysis Project</p>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="">
-                        <img src="project3.jpg" alt="Project 4">
-                        <p>Medical Equipment Tracking Pilot</p>
-                    </a>
+                        <div class="project-details" id="details-5" >
+                            <h2>Acadia Sound Analysis Project</h2>
+                            <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                            <div class="project-footer">
+                                <div class="project-skills">
+                                    <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
+                                </div>
+                                <a href="">
+                                    <img src="src/Assets/github-icon.png" alt="github">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="education">
-
         </div>
     </div>
     <script>
