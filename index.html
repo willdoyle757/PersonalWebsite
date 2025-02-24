@@ -19,6 +19,10 @@
             font-size: 18px;
             letter-spacing: -0.15px;
             list-style-type: none;
+            justify-content: left;
+            flex-wrap: wrap;
+            padding: 10px;
+            
         }
         .navbar{
             color: white;
@@ -27,6 +31,7 @@
             padding: 10px 10px 10px;
             font-size: 20px;
             transition: background 0.3s;
+            width: 100%;
             
         }
         .navbar a:hover {
@@ -38,14 +43,15 @@
             text-decoration: none;
         }
         .container {
-            width: 80%;
+            width: 90%;
             margin: auto;
             padding: 20px;
         }
         .header {
             display: flex;
             text-align: center;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
             
         }
         .header .info {
@@ -53,9 +59,12 @@
         }
         
         .profile img {
-            width: 300px;
+            width: 100%;
+            max-width: 600px;
             border-radius: 20%;
-            
+        }
+        .info-title {
+            font-size: 20px;
         }
         .contact-info img{
             max-height: 30px;
@@ -72,7 +81,6 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            
             justify-content: center;
             align-items: center;
         }
@@ -98,8 +106,8 @@
             margin-top: 10px;
         }
         .project-details a img{
-            width: 10vw;
-            max-width: 50px; 
+            width: 8vw;
+            max-width: 40px; 
             height:auto;
             
         }
@@ -112,8 +120,8 @@
             
         }
         .project-skills img{
-            width: 10vw;
-            max-width: 50px; 
+            width: 8vw;
+            max-width: 40px; 
             height:auto;
         }
     </style>
@@ -138,17 +146,18 @@
 
     <div class="container">
         <div class="header">
+             
             <div class="info">
                 <h1 class="info-name">William Doyle</h1>
                 <p class="info-title">Software Engineer</p>
                 <div class="contact-info">
-                    <a>
+                    <a href="https://github.com/willdoyle757">
                         <img src="src/Assets/github-icon.png" alt="github">
                     </a>
-                    <a>
+                    <a href="https://www.linkedin.com/in/wcdoyle/">
                         <img src="src/Assets/linkedin-icon.png" alt="Linkedin">
                     </a>
-                    <a>
+                    <a href="mailto:willdoyle757@gmail.com">
                         <img src="src/Assets/gmail-icon.png" alt="Gmail">
                     </a>
                 </div>
@@ -156,11 +165,11 @@
                     with a bachelor's in computer science. I have strong interest in machine learning, systems level programming, 
                     and backend software development.</p>
             </div>
-            <div>
-                <div class="profile">
-                    <img src="src/Assets/Graduation_Picture.jpg" alt="William Doyle">
-                </div>
-            </div>
+            
+            <div class="profile">
+                <img src="src/Assets/Graduation_Picture.jpg" alt="William Doyle">
+            </div> 
+             
         </div>
             
         <div id="skills" class="skills">
@@ -207,6 +216,7 @@
                         <div class="project-details" id="details-2" >
                             <h2>ESP32 Wireless Moisture Sensor</h2>
                             <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                            <a style="font-size: 20px;" href="https://willdoyle757.github.io/MoistureSensorDemo/">Live Data Website</a>
                             <div class="project-footer">
                                 <div class="project-skills">
                                     <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
