@@ -10,7 +10,7 @@
             color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 0%;
         }
         .nav-list {
             display: flex;
@@ -45,7 +45,7 @@
         .container {
             width: 90%;
             margin: auto;
-            padding: 20px;
+            padding: 0%;
         }
         .header {
             display: flex;
@@ -86,23 +86,28 @@
         }
         .project {
             background-color: #1e1e1e;
-            padding: 30px;
+            
             border-radius: 10px;
             border: 3px solid #FFFFFF;
+            padding-top: 20px;
+            padding-bottom: 20px;
             text-align: center;
             width: 90%;
         }
         .project-header{
             display: flex;         
-            justify-content: space-between; 
+            justify-content: center; 
+            flex-wrap: wrap;
             align-items: center;
         }
-        .project img {
-            width: 30%;
+        .project-thumbnail {
+            width: 20vw;
+            min-width: 200px;
             border-radius: 5px;
         }
         .project-details{
             padding: 10px;
+            width: 50vw;
             margin-top: 10px;
         }
         .project-details a img{
@@ -192,7 +197,7 @@
             <div class="projects-grid">
                 <div class="project">
                     <div class="project-header">
-                        <img src="src/Assets/custom-malloc-thumbnail.png" alt="Memory Allocator">
+                        <img class="project-thumbnail" src="src/Assets/custom-malloc-thumbnail.png" alt="Memory Allocator">
                         <div class="project-details" id="details-1" >
                             <h2>Custom Memory Allocator in C++</h2>
                             <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
@@ -212,7 +217,7 @@
                 </div>
                 <div class="project">
                     <div class="project-header">
-                        <img src="" alt="Mositure Sensor">
+                        <img class="project-thumbnail" src="" alt="Mositure Sensor">
                         <div class="project-details" id="details-2" >
                             <h2>ESP32 Wireless Moisture Sensor</h2>
                             <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
@@ -231,7 +236,7 @@
                 </div>
                 <div class="project" onclick="toggleDetails(3)">
                     <div class="project-header">
-                        <img src="src/Assets/Financial-Thumbnail.png" alt="Project 1">
+                        <img class="project-thumbnail" src="src/Assets/Financial-Thumbnail.png" alt="Project 1">
                         <div class="project-details" id="details-3" >
                             <h2>Financial Literacy and Budgeting App</h2>
                             <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
@@ -248,7 +253,7 @@
                 </div>
                 <div class="project">
                     <div class="project-header">
-                        <img src="project2.jpg" alt="Project 2">
+                        <img class="project-thumbnail" src="project2.jpg" alt="Project 2">
                         <div class="project-details" id="details-4" >
                             <h2>Blood MNIST CNN Classifier Transfer Learning Model</h2>
                             <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
@@ -265,7 +270,7 @@
                 </div>
                 <div class="project" >
                     <div class="project-header">
-                        <img src="src/Assets/Bar_Harbor_Picture.jpg" alt="Project 3">
+                        <img class="project-thumbnail" src="src/Assets/Bar_Harbor_Picture.jpg" alt="Project 3">
                         <div class="project-details" id="details-5" >
                             <h2>Acadia Sound Analysis Project</h2>
                             <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
