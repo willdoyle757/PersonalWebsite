@@ -32,7 +32,8 @@
             font-size: 20px;
             transition: background 0.3s;
             width: 100%;
-            
+            position: fixed;
+            top: 0px;
         }
         .navbar a:hover {
             background: #333;
@@ -45,14 +46,15 @@
         .container {
             width: 90%;
             margin: auto;
-            padding: 0%;
+            padding: 25px;
+            margin-top: 7%;
         }
         .header {
             display: flex;
             text-align: center;
             align-items: center;
             justify-content: center;
-            
+            scroll-margin-top: 120px;
         }
         .header .info {
             text-align: left; 
@@ -74,8 +76,9 @@
             margin-right: 2%;
 
         }
-        .projects, .experience .skills {
+        .projects, .experience, .skills {
             margin-top: 5%;
+            scroll-margin-top: 120px;
         }
         .projects-grid {
             display: flex;
@@ -150,8 +153,7 @@
     </div>
 
     <div class="container">
-        <div class="header">
-             
+        <div id="about" class="header">
             <div class="info">
                 <h1 class="info-name">William Doyle</h1>
                 <p class="info-title">Software Engineer</p>
@@ -200,10 +202,13 @@
                         <img class="project-thumbnail" src="src/Assets/custom-malloc-thumbnail.png" alt="Memory Allocator">
                         <div class="project-details" id="details-1" >
                             <h2>Custom Memory Allocator in C++</h2>
-                            <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                            <p>
+                                Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory
+                                allocation strategies. Additionally, I have a series of benchmarks to measure different strategies performance on time for 
+                                allocation and deallocation, and fragmentation 
+                            </p>
                             <div class="project-footer">
                                 <div class="project-skills">
-                                    <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
                                     <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
                                 </div>
                                 <a href="">
@@ -220,11 +225,22 @@
                         <img class="project-thumbnail" src="" alt="Mositure Sensor">
                         <div class="project-details" id="details-2" >
                             <h2>ESP32 Wireless Moisture Sensor</h2>
-                            <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                            <p>
+                                This projects used an ESP32 microcontroller to monitor moisture levels in realtime and displays the live feed to a website for easy access.
+                                The sensor collects data in intervals and transmits it wirelessly to a realtime database on Google firebase. The data is then fetched by a
+                                seperate website hosted on github pages to display the live data. This allows for easier monitoring of the plants. 
+                            </p>
+                            <p>
+                                Potential future plans would involve using a timeseries database to store intervals of sensor data over a series of time that could then
+                                be used for analysis later on. 
+                            </p>
                             <a style="font-size: 20px;" href="https://willdoyle757.github.io/MoistureSensorDemo/">Live Data Website</a>
                             <div class="project-footer">
                                 <div class="project-skills">
                                     <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
+                                    <img src="src/Assets/html-icon.png" alt="html-icon">
+                                    <img src="src/Assets/css-icon.png" alt="css-icon">
+                                    <img src="src/Assets/firebase-icon.png" alt="firebase-icon">
                                 </div>
                                 <a href="">
                                     <img src="src/Assets/github-icon.png" alt="github">
@@ -239,10 +255,25 @@
                         <img class="project-thumbnail" src="src/Assets/Financial-Thumbnail.png" alt="Project 1">
                         <div class="project-details" id="details-3" >
                             <h2>Financial Literacy and Budgeting App</h2>
-                            <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                            <p>
+                                This project was for my major capstone in which me and another person, in 7 weeks, had to build a financial Literacy and budgeting app for a 
+                                company sponsor through WPI. 
+                            </p>
+                            <p>
+                                The application had a host of features including: secure authentication using proper salt and pepper hashing, 
+                                a page for tracking budgets among different categories, connecting to the user bank account using the stripe api and allowing all e-transactions
+                                to be sorted into there appropriate user budget category, detailed spending analysis on each budget category, a chat bot using OpenAI API that
+                                was pre prompted on user financial data so that it was able to provided personalized financial advice to the user and more.                    
+                            </p>
+                            <p>
+                                Unfortunately due to the app being the property of the company, the repository for the project is private.
+                            </p>
                             <div class="project-footer">
                                 <div class="project-skills">
-                                    <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
+                                    <img src="src/Assets/csharp-icon.png" alt="csharp-icon">
+                                    <img src="src/Assets/azure-icon.png" alt="azure-icon">
+                                    <img src="src/Assets/reactnative-icon.png" alt="react-icon">
+                                    <img src="src/Assets/javascript-icon.png" alt="javascript-icon">
                                 </div>
                                 <a href="">
                                     <img src="src/Assets/github-icon.png" alt="github">
@@ -256,10 +287,12 @@
                         <img class="project-thumbnail" src="project2.jpg" alt="Project 2">
                         <div class="project-details" id="details-4" >
                             <h2>Blood MNIST CNN Classifier Transfer Learning Model</h2>
-                            <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                            <p>wip </p>
                             <div class="project-footer">
                                 <div class="project-skills">
-                                    <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
+                                    <img src="src/Assets/python-icon.png" alt="python-icon">
+                                    <img src="src/Assets/pandas-icon.png" alt="pandas-icon">
+                                    <img src="src/Assets/pytorch-icon.png" alt="pytorch-icon">
                                 </div>
                                 <a href="">
                                     <img src="src/Assets/github-icon.png" alt="github">
@@ -273,10 +306,12 @@
                         <img class="project-thumbnail" src="src/Assets/Bar_Harbor_Picture.jpg" alt="Project 3">
                         <div class="project-details" id="details-5" >
                             <h2>Acadia Sound Analysis Project</h2>
-                            <p>Built a custom memory allocator class in C++ using the windows memory api and implemented a malloc(), free(), and multiple memory allocation strategies</p>
+                            <p>wip</p>
                             <div class="project-footer">
                                 <div class="project-skills">
-                                    <img src="src/Assets/cpp-icon.png" alt="cpp-icon">
+                                    <img src="src/Assets/python-icon.png" alt="python-icon">
+                                    <img src="src/Assets/pandas-icon.png" alt="pandas-icon">
+                                    <img src="src/Assets/tensorflow-icon.png" alt="tensorflow-icon">
                                 </div>
                                 <a href="">
                                     <img src="src/Assets/github-icon.png" alt="github">
