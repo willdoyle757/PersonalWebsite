@@ -47,26 +47,38 @@
             width: 90%;
             margin: auto;
             padding: 25px;
-            margin-top: 7%;
+            margin-top: 10%;
         }
         .header {
             display: flex;
+            flex-wrap: wrap;
             text-align: center;
             align-items: center;
             justify-content: center;
             scroll-margin-top: 120px;
+            gap: 20px;
         }
         .header .info {
             text-align: left; 
         }
+
+        .profile {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
         
         .profile img {
             width: 100%;
-            max-width: 600px;
+            max-width: 400px;
+            min-width: 200px;
             border-radius: 20%;
         }
+        .info-name{
+            font-size: 50px;
+        }
         .info-title {
-            font-size: 20px;
+            font-size: 40px;
         }
         .contact-info img{
             max-height: 30px;
@@ -168,15 +180,17 @@
                         <img src="src/Assets/gmail-icon.png" alt="Gmail">
                     </a>
                 </div>
-                <p style="font-size:20px;"> Hello! my name is William Doyle, I graduated from Worcester Polytechnic Insititute 
-                    with a bachelor's in computer science. I have strong interest in machine learning, systems level programming, 
-                    and backend software development.</p>
             </div>
-            
             <div class="profile">
                 <img src="src/Assets/Graduation_Picture.jpg" alt="William Doyle">
             </div> 
              
+        </div>
+        <div class="about-text">
+            <p style="font-size:20px;"> Hello! my name is William Doyle, I graduated from Worcester Polytechnic Insititute 
+                with a bachelor's in computer science. I have strong interest in machine learning, systems level programming, 
+                and backend software development.
+            </p> 
         </div>
             
         <div id="skills" class="skills">
@@ -217,8 +231,6 @@
                             </div>
                         </div>
                     </div>
-
-                    
                 </div>
                 <div class="project">
                     <div class="project-header">
