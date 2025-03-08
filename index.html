@@ -80,13 +80,38 @@
         .info-title {
             font-size: 40px;
         }
+        .contact-info{
+            display:flex;
+            align-items: center;
+        }
         .contact-info img{
-            max-height: 30px;
+            max-height: 40px;
             width:auto;
             object-fit: cover;
             border-radius: 5px;
-            margin-right: 2%;
-
+            margin-right: 10px;
+        }
+        .contact-info button{
+            background-color: #ffffff; 
+            border: 2px solid black;;
+            color: black;
+            padding: 5px 12px;
+            text-align: center;
+            text-decoration: none;
+            object-fit: cover;
+            border-radius: 8px;
+            font-size: 30px;
+            margin-left: 5%;
+            transition: all 0.2s ease-in-out; 
+            cursor: pointer;
+        }
+        .contact-info button:hover {
+            background-color: #737373;
+            color: black;
+            transform: scale(1.05); 
+        }
+        .section-head{
+            font-size: 50px;
         }
         .projects, .experience, .skills {
             margin-top: 5%;
@@ -153,14 +178,12 @@
                 <a href="#about">William Doyle</a>
             </li>
             <li class="nav-item">
-                <a href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
                 <a href="#experience">Experience</a>
             </li>
             <li class="nav-item">
                 <a href="#projects">Projects</a>
             </li>
+            
         </ul>
     </div>
 
@@ -178,6 +201,9 @@
                     </a>
                     <a href="mailto:willdoyle757@gmail.com">
                         <img src="src/Assets/gmail-icon.png" alt="Gmail">
+                    </a>
+                    <a href="https://github.com/willdoyle757">
+                        <button>Resume</button>
                     </a>
                 </div>
                 <div></div>
@@ -198,7 +224,7 @@
 
         </div>
         <div id="experience" class="experience">
-            <h1>Experience</h2>
+            <h1 class="section-head">Experience</h2>
             <p>Software Enigneer Intern</p>
             <p>Shoptaki</p>
             <ul>
@@ -210,7 +236,7 @@
             </ul>
         </div>
         <div id="projects" class="projects">
-            <h1>Projects</h2>
+            <h1 class="section-head">Projects</h2>
             <div class="projects-grid">
                 <div class="project">
                     <div class="project-header">
