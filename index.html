@@ -50,6 +50,10 @@
             padding: 25px;
             margin-top: 100px;
         }
+        .about-section{
+            width: 90%;
+            margin: auto;
+        }
         .header {
             display: flex;
             flex-wrap: wrap;
@@ -116,6 +120,8 @@
         .section-head{
             font-size: 50px;
             text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
         }
         .projects, .experience, .skills {
             
@@ -130,14 +136,28 @@
             text-align: center;
             max-width: 90%;
             margin: 0 auto;
+            background-color: #1e1e1e; 
+            color: #f5f5f5; 
+            padding: 40px 0;
+            border-radius: 10px;
+            border: 3px solid #FFFFFF;
+        }
+        .experience-section img{
+            width: 30vw;
+            max-width: 40vh; 
+            height:auto;
+            border-radius: 12px;
         }
         .experience-title{
-            font-size: 30px;
-            margin-bottom: 5px;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ffffff;
         }
         .experience-company{
             font-size: 30px;
             margin-bottom: 5px;
+            color: #ffffff;
         }
         .experience-section ul{
             text-align: left;
@@ -175,6 +195,9 @@
             padding: 10px;
             width: 50vw;
             margin-top: 10px;
+        }
+        .project-details p{
+            font-size: 18px;
         }
         .project-details a img{
             width: 8vw;
@@ -214,52 +237,53 @@
     </div>
 
     <div class="container">
-        <div id="about" class="header">
-            <div class="info">
-                <h1 class="info-name">William Doyle</h1>
-                <p class="info-title">Software Engineer</p>
-                <div class="contact-info">
-                    <a href="https://github.com/willdoyle757">
-                        <img src="src/Assets/github-icon.png" alt="github">
-                    </a>
-                    <a href="https://www.linkedin.com/in/wcdoyle/">
-                        <img src="src/Assets/linkedin-icon.png" alt="Linkedin">
-                    </a>
-                    <a href="mailto:willdoyle757@gmail.com">
-                        <img src="src/Assets/gmail-icon.png" alt="Gmail">
-                    </a>
-                    <a href="src\Assets\WilliamDoyleResume.pdf">
-                        <button>Resume</button>
-                    </a>
+        <div class="about-section">
+            <div id="about" class="header">
+                <div class="info">
+                    <h1 class="info-name">William Doyle</h1>
+                    <p class="info-title">Software Engineer</p>
+                    <div class="contact-info">
+                        <a href="https://github.com/willdoyle757">
+                            <img src="src/Assets/github-icon.png" alt="github">
+                        </a>
+                        <a href="https://www.linkedin.com/in/wcdoyle/">
+                            <img src="src/Assets/linkedin-icon.png" alt="Linkedin">
+                        </a>
+                        <a href="mailto:willdoyle757@gmail.com">
+                            <img src="src/Assets/gmail-icon.png" alt="Gmail">
+                        </a>
+                        <a href="src\Assets\WilliamDoyleResume.pdf">
+                            <button>Resume</button>
+                        </a>
+                    </div>
+                    <div></div>
                 </div>
-                <div></div>
+                <div class="profile">
+                    <img src="src/Assets/Graduation_Picture_Cropped.jpg" alt="William Doyle">
+                </div> 
+                
             </div>
-            <div class="profile">
-                <img src="src/Assets/Graduation_Picture_Cropped.jpg" alt="William Doyle">
-            </div> 
-             
-        </div>
-        <div class="about-text">
-            <p style="font-size:20px;"> Hello! my name is William Doyle, I graduated from Worcester Polytechnic Insititute 
-                with a bachelor's in computer science. I have a strong background in C++, C#, .NET, and Python. I Enjoy everything
-                from low systems level programming and backend software development. 
-            </p> 
+            <div class="about-text">
+                <p style="font-size:20px;"> Hello! my name is William Doyle, I graduated from Worcester Polytechnic Insititute 
+                    with a bachelor's in computer science. I have a strong background in C++, C#, .NET, and Python. I have a passion for backend software development, low level system
+                    programming and machine learning. 
+                </p> 
+            </div>
         </div>
             
         <div id="skills" class="skills">
-
         </div>
         <div id="experience" class="experience">
             <h1 class="section-head">Experience</h2>
             <div class="experience-section">
                 <p class="experience-title">Software Engineer Intern</p>
-                <p class="experience-company">Shoptaki</p>
-                <ul>
-                    <li>Responsible for implementing Shoptaki's natural language solution for querying internal relational databases backend for website.</li>
-                    <li>Researched natural language models (commercial and open source) and selected models for deployment.</li>
-                    <li>Cleaned and Preprocessed WikiSQL training dataset in Python and Pandas for model training, ensuring high-quality and accurate datasets for analysis.</li>
-                    <li>Ran encoder-decoder models and compared overall performance/accuracy using TensorFlow on Google Collab.</li>
-                    <li>Led team organization and project structuring using Agile methodologies, coordinating tasks and ensuring timely delivery of project objectives.</li>
+                <img src="src\Assets\ShoptakiNotCropped.png" alt="Shoptaki">
+                <ul class="experience-list">
+                    <li><strong>Responsible</strong> for implementing Shoptaki's natural language solution for querying internal relational databases backend for website.</li>
+                    <li><strong>Researched</strong> natural language models (commercial and open source) and selected models for deployment.</li>
+                    <li><strong>Cleaned</strong> and Preprocessed WikiSQL training dataset in Python and Pandas for model training, ensuring high-quality and accurate datasets for analysis.</li>
+                    <li><strong>Trained</strong> and tested encoder-decoder models and compared overall performance/accuracy using TensorFlow on Google Collab.</li>
+                    <li><strong>Led</strong> team organization and project structuring using Agile methodologies, coordinating tasks and ensuring timely delivery of project objectives.</li>
                 </ul>
             </div>    
         </div>
@@ -291,15 +315,15 @@
                     <div class="project-header">
                         <img class="project-thumbnail" src="" alt="Mositure Sensor">
                         <div class="project-details" id="details-2" >
-                            <h2>ESP32 Wireless Moisture Sensor</h2>
+                            <h2>ESP32 Plant Monitoring System</h2>
                             <p>
-                                This projects used an ESP32 microcontroller to monitor moisture levels in realtime and displays the live feed to a website for easy access.
+                                This projects used an ESP32 microcontrollers to monitor moisture levels in realtime and displays the live feed to a website for easy access.
                                 The sensor collects data in intervals and transmits it wirelessly to a realtime database on Google firebase. The data is then fetched by a
-                                seperate website hosted on github pages to display the live data. This allows for easier monitoring of the plants. 
+                                seperate website hosted on github pages to display the live data. This allows for more convenient monitoring of plants. 
                             </p>
                             <p>
-                                Potential future plans would involve using a timeseries database to store intervals of sensor data over a series of time that could then
-                                be used for analysis later on. 
+                                Future plans would involve using a database to store intervals of sensor data over a series of time that could then
+                                be used for analysis later on. I would also like to add a temperature sensor to capture temperature data as well.
                             </p>
                             <a style="font-size: 20px;" href="https://willdoyle757.github.io/MoistureSensorDemo/">Live Data Website</a>
                             <div class="project-footer">
@@ -358,15 +382,18 @@
                                 For my school's Interactive Qualifying Project(IQP) I along with a team of 4 other students were tasked with studying noise pollution in 
                                 acadia national park. For this project my team and I collected sound data along different acoustic zones in the park and then analyzed this
                                 data to determine the rates of noise pollution by nmanually identiying the different sound clips that contained artificial noise. 
-                                
+                            </p>
+                            <p>
                                 Additionally for this project I was tasked with implementing a machine learning solution for automatically identifying the rates of noise 
                                 pollution by providing a value to each noise clip which reflected whether the clip contained natural or unnatural noise.  
-
+                            </p>
+                            <p>
                                 To do this I had to collect manually pre-labelled sound data along with a starting data set containing 50 different sound that were labeled
                                 as either natural or unnatural. I then preprocessed the collected data by converting wav files into spectrograms which were images that showed
                                 the frequency over time. A conolutional neural network is then trained to determine whethere the spectrogram image represent natural or unnatural
                                 sounds
-
+                            </p>
+                            <p>
                                 With the limited time I had to work on this I managed to achieve a 92% accuracy for identify sounds from the park as natural or unnatural.
                             </p>
                             <div class="project-footer">
